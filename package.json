@@ -1,0 +1,41 @@
+{
+  "name": "cli",
+  "version": "1.0.0",
+  "description": "cli for some template",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sqshada/cli.git"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sqshada/cli/issues"
+  },
+  "homepage": "https://github.com/sqshada/cli#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/eslint-parser": "^7.17.0",
+    "@commitlint/config-conventional": "^16.2.1",
+    "commitlint": "^16.2.3",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
+    "prettier": "^2.6.2"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "download-git-repo": "^3.0.2",
+    "inquirer": "^8.2.2",
+    "ora": "^6.1.0"
+  }
+}
