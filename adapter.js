@@ -24,6 +24,8 @@ function retryAdapter(config){
   }).catch(error =>{
     if(error.code === 'ECONNABORTED' && error.message.indexOf('timeout') !==- 1 && retry < maxRetry){
       config.retry = retry + 1;
+      console.log(22345)
+      // retry += 1
       retryAdapter(config)
     } else {
       console.log(44567)
@@ -48,5 +50,3 @@ const getDefaultAdapter = () => {
 }
 
 export default retryAdapter
-// module.exports = retryAdapter;
-// module.exports.default = retryAdapter
