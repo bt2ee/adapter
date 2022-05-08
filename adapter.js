@@ -1,3 +1,6 @@
+import xhrRequest from 'axios/lib/adapters/xhr'
+import httpRequest from 'axios/lib/adapters/http'
+
 function Defer() {
   this.promise = new Promise((resolve, reject) => {
     this.resolve = resolve;
@@ -21,9 +24,6 @@ function retryAdapter(config){
   }).catch(error =>{
     if(error.code === 'ECONNABORTED' && error.message.indexOf('timeout') !==- 1 && retry < maxRetry){
       config.retry = retry + 1;
-      console.log('到这里1111', error, retry)
-      console.log(22345)
-      // retry += 1
       retryAdapter(config)
     } else {
       console.log(44567)
@@ -37,12 +37,12 @@ function retryAdapter(config){
 const getDefaultAdapter = () => {
   let adapter
   if(typeof XMLHttpRequest !== "undefined") {
-    adapter = require("axios/lib/adapters/xhr")
+    adapter = xhrRequest
     console.log(3456)
   } else {
     // For node use HTTP adapter
     console.log(1234)
-    adapter = require("axios/lib/adapters/http");
+    adapter = httpRequest
   }
   return adapter;
 }
