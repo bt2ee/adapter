@@ -4,6 +4,13 @@
 import axios from 'axios'
 import retryAdapter from './../../adapter.js'
 
+axios.interceptors.request.use((config) => {
+  console.log('axios123😁😁rrrr')
+  return config
+  }, async error => {
+      console.log('axios123😁😁')
+    })
+
 axios.defaults.adapter = retryAdapter
 
 // const request = axios.create({
