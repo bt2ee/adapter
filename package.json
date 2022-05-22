@@ -1,24 +1,24 @@
 {
-  "name": "cli",
+  "name": "adapter-retry",
   "version": "1.0.0",
-  "description": "cli for some template",
-  "main": "index.js",
+  "description": "adapter for axios",
+  "main": "./dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup ./src/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sqshada/cli.git"
+    "url": "git+github.com:bt2ee/adapter.git"
   },
   "keywords": [
     "cli"
   ],
-  "author": "",
+  "files": ["dist"],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sqshada/cli/issues"
+    "url": "https://github.com/bt2ee/adapter/issues"
   },
-  "homepage": "https://github.com/sqshada/cli#readme",
+  "homepage": "https://github.com/bt2ee/adapter#readme",
   "devDependencies": {
     "@babel/core": "^7.17.8",
     "@babel/eslint-parser": "^7.17.0",
@@ -29,13 +29,10 @@
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.7",
-    "prettier": "^2.6.2"
+    "prettier": "^2.6.2",
+    "tsup": "^5.12.8"
   },
   "dependencies": {
-    "axios": "^0.27.2",
-    "chalk": "^4.1.0",
-    "download-git-repo": "^3.0.2",
-    "inquirer": "^8.2.2",
-    "ora": "^6.1.0"
+    "axios": "^0.27.2"
   }
 }
